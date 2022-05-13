@@ -1,5 +1,281 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* -------------HEADER------------- */
+header {
+    padding: 10px 0;
+    width: 100% !important;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent; 
+    -webkit-transition: all ease-out .2s;
+    -moz-transition: all ease-out .2s;
+    -o-transition: all ease-out .2s;
+    transition: all ease-out .2s;
+}
+
+.active {
+    background-color: #fff;
+    padding: 5px 0;
+    transition: all ease-out .2s;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    color: #FB811E;
+}
+
+.logo a {
+    font-size: 32px;
+    font-weight: 550;
+    text-decoration: none;
+    color: #FB811E;
+}
+
+.logo i {
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+
+.logo:hover {
+    color: black;
+    transition: all 0.5s linear;
+}
+
+.logo:hover a {
+    color: black;
+    transition: all 0.5s linear;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.left-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.form-inline {
+    position: relative;
+}
+
+.form-control {
+    background-image: url(https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/search.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    transition: all 0.1s linear;
+}
+
+.form-control:focus {
+    width: 100% !important;
+    border-radius: 10px !important;
+    background-position: 10px !important;
+    padding-left: 40px !important;
+    transition: all 0.1s linear;
+}
+
+.navbar-toggler-icon {
+    font-size: 1rem !important;
+    background-image: none !important;
+}
+
+.navbar-toggler-icon .fa {
+    line-height: 24px;
+    font-size: 30px;
+}
+
+.navbar-nav {
+    border-radius: 10px;
+}
+
+.collapse .navbar-nav .nav-item a:hover {
+    color: #FB811E;
+    transition: all 0.5s linear;
+}
+
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+}
+
+.theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #2a2c2d;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button {
+    color: var(--font-color);
+    background: var(--color-primary);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FB811E;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: rgb(10, 10, 10) url('https://i.ibb.co/FxzBYR9/night.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked+.slider {
+    background-color: #FB811E;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #FB811E;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #fff;
+    color: #fff;
+}
+
+.container button {
+    background: transparent;
+}
+
+.container button:hover {
+    background: transparent;
+}
+
+.navbar-toggler:focus {
+    outline: 0px;
+}
+
+.nav-item {
+    font-size: 16px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+.navbar-collapse {
+    position: absolute;
+    top: 100%;
+    width: 20%;
+}
+
+.collapsed {
+    padding: 0;
+}
+
+.switch {
+    margin-bottom: 0;
+}
+
+.navbar-toggler {
+    padding: 0 !important;
+}
+/* ------------Responsive--------- */
+/* Các loại màn kia đã được boostrap respon sẵn chỉ cần thêm màng hình lớn hơn 1280px */
+@media (min-width : 1280px) {
+    .container{
+        max-width : 1200px;
+    }
+}
+
+/* ----------End Header---------- */
+
+/* -------------Carousel--------- */
+
