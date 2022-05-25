@@ -1086,6 +1086,31 @@ input:checked+.slider:before {
 /* ---------End Footer------------ */
 
 /* ---RESPONSIVE----- */
+@media screen and (max-width: 1700px){
+    .left__carousel span{
+        top: 5%;
+    }
+    .text__carousel{
+        top: 18%;
+    }
+    .text__carousel h3{
+        font-size: 40px;
+    }
+    .text__carousel p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .left__carousel span{
+        font-size: 100px;
+        top: 2%;
+        left: 40%;
+    }
+    .text__carousel{
+        left: 20%;
+        top: 16%;
+    }
+}
 @media screen and (max-width: 992px) {
     .product .container{
         display: grid;
@@ -1137,11 +1162,45 @@ input:checked+.slider:before {
         left: 90% !important;
         top: 80% !important;
     }
+    .bottom__service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .infor{
+        margin-top: 100px;
+    }
 }
 @media screen and (max-width: 767px) {
     .year__features{
         top: 35% !important;
         width: 60% !important;
+    }
+    .carousel{
+        position: relative;
+    }
+    .left__carousel{
+        position: absolute;
+        z-index: 50;
+        top: 100px;
+        left: -10%;
+    }
+    .right__carousel{
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+    }
+    .text__carousel{
+        padding: 70px;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 30;
+        background: #fff;
+        top : 100px;
+        left: 3%;
+    }
+    .bottom__service{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width : 576px) {
